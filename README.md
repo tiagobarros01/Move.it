@@ -1,4 +1,4 @@
-# Move.it <img src="./public/favicon.png"/>
+# Move.it <img src="./public/logo-full.svg"/>
 ## *Techs*: Next.JS | React | Typescript | Styled-Components
 
 ## I also used Eslint & Commitlint in development
