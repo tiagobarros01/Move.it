@@ -23,6 +23,8 @@
     "react-hooks"
   ],
   "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react/jsx-props-no-spreading": "off",
     "space-before-function-paren": "off",
     "react/prop-types": "off",
     "react/jsx-filename-extension": [

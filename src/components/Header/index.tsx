@@ -1,14 +1,12 @@
 import React from 'react';
-import Header, {
-  CurrentSpan, DivView, Span, View,
-} from './style';
+import { Header, View } from './style';
 
 const ExperienceBar: React.FC = () => (
   <Header>
-    <Span>0 xp</Span>
+    <span>0 xp</span>
     <View>
-      <DivView style={{ width: '50%' }} />
-      <CurrentSpan style={{ left: '50%' }}>300xp (50%)</CurrentSpan>
+      <div style={{ width: '50%' }} />
+      <span style={{ left: '50%' }}>300xp (50%)</span>
     </View>
     <span>600 xp</span>
   </Header>

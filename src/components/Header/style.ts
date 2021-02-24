@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-const Header = styled.header`
+export const Header = styled.header`
   display: flex;
   align-items: center;
-`;
 
-export const Span = styled.span`
-  font-size: 1rem;
+  & > span {
+    font-size: 1rem;
+  }
 `;
 
 export const View = styled.div`
@@ -16,18 +16,16 @@ export const View = styled.div`
   background: var(--gray-line);
   margin: 0 1.5rem;
   position: relative;
-`;
 
-export const DivView = styled.div`
-  height: 4px;
-  border-radius: 4px;
-  background: var(--green);
-`;
+  & > div {
+    height: 4px;
+    border-radius: 4px;
+    background-image: linear-gradient(to right, var(--green), var(--green-dark));
+  }
 
-export const CurrentSpan = styled.div`
-  position: absolute;
-  top: 12px;
-  transform: translateX(-50%);
+  & > span {
+    position: absolute;
+    top: 12px;
+    transform: translateX(-50%);
+  }
 `;
-
-export default Header;

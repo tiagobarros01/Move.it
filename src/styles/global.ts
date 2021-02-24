@@ -1,14 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
-
-export const Container = styled.div`
-  height: 100vh;
-  max-width: 992px;
-  margin: 0 auto;
-  padding: 2.5rem 2rem;
-
-  display: flex;
-  flex-direction: column;
-`;
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -49,6 +39,7 @@ a {
   --tile: #2e384d;
   --red: #e8384d;
   --green: #4cd62b;
+  --green-dark: #49b22a;
   --blue: #5965e0;
   --blue-dark: #3953b8;
   --blue-twitter: #2aa9e0;

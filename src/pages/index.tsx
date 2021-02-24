@@ -1,19 +1,28 @@
-import Head from "next/head";
-import ExperienceBar from "../components/Header";
-import GlobalStyle, { Container } from "../styles/global";
+import React from 'react';
+import Head from 'next/head';
+import CompletedChallenges from '../components/CompletedChallenges';
+import Countdown from '../components/Countdown';
+import ExperienceBar from '../components/Header';
+import Profile from '../components/Profile';
+import GlobalStyle from '../styles/global';
+import { Container, Section } from '../styles/pages/Home';
 
 export default function Home() {
   return (
     <Container>
-      <ExperienceBar />
-      <GlobalStyle />
       <Head>
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@600&display=swap"
-          rel="stylesheet"
-        />
+        <title>Start | move.it</title>
       </Head>
+      <ExperienceBar />
+      <Section>
+        <div>
+          <Profile />
+          <CompletedChallenges />
+          <Countdown />
+        </div>
+        <div />
+      </Section>
+      <GlobalStyle />
     </Container>
   );
 }
