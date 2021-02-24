@@ -1,9 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { CountdownButton, CountdownContainer } from './style';
+import React, { useState, useEffect, useContext } from 'react';
+import { ChallengesContext } from '../../contexts/challengesContext';
+import {
+  CountdownButton,
+  CountdownButtonActive,
+  CountdownContainer,
+} from './style';
+
+let countdownTimeout: NodeJS.Timeout;
 
 const Countdown: React.FC = () => {
-  const [time, setTime] = useState(25 * 60);
-  const [active, setActive] = useState(false);
+  const { startNewChallenge } = useContext(ChallengesContext);
+
+  const [time, setTime] = useState(0.1 * 60);
+  const [isActive, setisActive] = useState(false);
+  const [hasFinished, setHasFinished] = useState(false);
 
   const minutes = Math.floor(time / 60);
   const seconds = time % 60;
@@ -12,16 +22,26 @@ const Countdown: React.FC = () => {
   const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');
 
   const startCountdown = () => {
-    setActive(true);
+    setisActive(true);
+  };
+
+  const resetCountdown = () => {
+    clearTimeout(countdownTimeout);
+    setisActive(false);
+    setTime(0.1 * 60);
   };
 
   useEffect(() => {
-    if (active && time > 0) {
-      setTimeout(() => {
+    if (isActive && time > 0) {
+      countdownTimeout = setTimeout(() => {
         setTime(time - 1);
       }, 1000);
+    } else if (isActive && time === 0) {
+      setHasFinished(true);
+      setisActive(false);
+      startNewChallenge();
     }
-  }, [active, time]);
+  }, [isActive, time]);
 
   return (
     <div>
@@ -37,9 +57,21 @@ const Countdown: React.FC = () => {
         </div>
       </CountdownContainer>
 
-      <CountdownButton type="button" onClick={startCountdown}>
-        Start countdown
-      </CountdownButton>
+      {hasFinished ? (
+        <CountdownButton disabled>Finished countdown</CountdownButton>
+      ) : (
+        <>
+          {isActive ? (
+            <CountdownButtonActive type="button" onClick={resetCountdown}>
+              Leave countdown
+            </CountdownButtonActive>
+          ) : (
+            <CountdownButton type="button" onClick={startCountdown}>
+              Start countdown
+            </CountdownButton>
+          )}
+        </>
+      )}
     </div>
   );
 };

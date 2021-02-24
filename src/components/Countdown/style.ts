@@ -52,15 +52,53 @@ export const CountdownButton = styled.button`
   border: 0;
   border-radius: 5px;
 
-  background: var(--blue);
-  color: var(--white);
+  background: var(--white);
+  color: var(--title);
 
   font-size: 1.25rem;
   font-weight: 600;
 
   transition: 200ms;
 
-  &:hover {
-    background: var(--blue-dark);
+  &:not(:disabled):hover {
+    /* background: var(--blue-dark); */
+    border-bottom: 3px solid var(--blue);
+  }
+
+  &:disabled {
+    background: var(--white);
+    color: var(--text);
+    cursor: not-allowed;
+
+    border-bottom: 3px solid var(--green);
+  }
+`;
+
+export const CountdownButtonActive = styled.button`
+  width: 100%;
+  height: 5rem;
+
+  margin-top: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 0;
+  border-radius: 5px;
+
+  background: var(--white);
+  color: var(--title);
+  border: 1px solid var(--gray-line);
+
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  transition: 200ms ease-in-out;
+
+  &:not(:disabled):hover {
+    /* background: var(--red);
+    color: var(--white); */
+    border-bottom: 3px solid var(--red-dark);
   }
 `;

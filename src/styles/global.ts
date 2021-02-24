@@ -36,8 +36,9 @@ a {
   --gray-line: #dcdde0;
   --text: #666666;
   --text-highlight: #b3b9ff;
-  --tile: #2e384d;
+  --title: #2e384d;
   --red: #e8384d;
+  --red-dark: #d9415f;
   --green: #4cd62b;
   --green-dark: #49b22a;
   --blue: #5965e0;

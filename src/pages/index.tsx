@@ -1,11 +1,14 @@
-import React from 'react';
 import Head from 'next/head';
+
+import React from 'react';
+import GlobalStyle from '../styles/global';
+
 import CompletedChallenges from '../components/CompletedChallenges';
 import Countdown from '../components/Countdown';
 import ExperienceBar from '../components/Header';
 import Profile from '../components/Profile';
-import GlobalStyle from '../styles/global';
 import { Container, Section } from '../styles/pages/Home';
+import ChallengeBox from '../components/ChallengeBox';
 
 export default function Home() {
   return (
@@ -20,7 +23,9 @@ export default function Home() {
           <CompletedChallenges />
           <Countdown />
         </div>
-        <div />
+        <div>
+          <ChallengeBox />
+        </div>
       </Section>
       <GlobalStyle />
     </Container>
