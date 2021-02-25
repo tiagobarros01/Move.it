@@ -60,6 +60,10 @@ export const CountdownButton = styled.button`
 
   transition: 200ms;
 
+  & img {
+    margin-left: 1rem;
+  }
+
   &:not(:disabled):hover {
     /* background: var(--blue-dark); */
     border-bottom: 3px solid var(--blue);
