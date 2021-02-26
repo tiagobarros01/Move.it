@@ -13,14 +13,14 @@ export const View = styled.div`
   flex: 1;
   height: 4px;
   border-radius: 4px;
-  background: var(--gray-line);
+  background: ${(props) => props.theme.colors.lineGray};
   margin: 0 1.5rem;
   position: relative;
 
   & > div {
     height: 4px;
     border-radius: 4px;
-    background-image: linear-gradient(to right, var(--green), var(--green-dark));
+    background-image: linear-gradient(to right, ${(props) => props.theme.colors.green}, ${(props) => props.theme.colors.DarkGreen});
   }
 
   & > span {

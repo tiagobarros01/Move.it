@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ChallengeBoxContainer = styled.div`
   height: 100%;
 
-  background: var(--white);
+  background: ${(props) => props.theme.colors.secondary};
   border-radius: 5px;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
   padding: 1.5rem 2rem;
@@ -48,11 +48,11 @@ export const ChallengeActive = styled.div`
   flex-direction: column;
 
   & header {
-    color: var(--blue);
+    color: ${(props) => props.theme.colors.blue};
     font-weight: 600;
     font-size: 1.25rem;
     padding: 0 2rem 1.5rem;
-    border-bottom: 1px solid var(--gray-line);
+    border-bottom: 1px solid ${(props) => props.theme.colors.lineGray};
   }
 
   & main {
@@ -65,7 +65,7 @@ export const ChallengeActive = styled.div`
     & strong {
       font-size: 2rem;
       font-weight: 600;
-      color: var(--title);
+      color: ${(props) => props.theme.colors.title};
       margin: 1.5rem 0 1rem;
     }
   }
@@ -89,7 +89,7 @@ export const ChallengeActive = styled.div`
       border: 0;
       border-radius: 5px;
 
-      color: var(--white);
+      color: ${(props) => props.theme.colors.secondary};
 
       font-size: 1rem;
       font-weight: 600;
@@ -104,9 +104,9 @@ export const ChallengeActive = styled.div`
 `;
 
 export const ChallengeFailedButton = styled.button`
-  background: var(--red);
+  background: ${(props) => props.theme.colors.red};
 `;
 
 export const ChallengeSucceededButton = styled.button`
-  background: var(--green)
+  background: ${(props) => props.theme.colors.green};
 `;

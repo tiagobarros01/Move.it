@@ -42,6 +42,7 @@ const Countdown: React.FC = () => {
           ) : (
             <CountdownButton type="button" onClick={startCountdown}>
               Start countdown
+              <img src="./icons/cicleStart.svg" alt="Start" />
             </CountdownButton>
           )}
         </>

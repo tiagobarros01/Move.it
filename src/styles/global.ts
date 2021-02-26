@@ -5,6 +5,8 @@ const GlobalStyle = createGlobalStyle`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  transition: 200ms;
 }
 
 body, button {
@@ -12,8 +14,8 @@ body, button {
 }
 
 body {
-  background: var(--background);
-  color: var(--text);
+  background: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.text};
 }
 
 body, input, textarea, button {
@@ -28,22 +30,6 @@ button {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-:root {
-  --white: #fff;
-  --background: #f2f3f5;
-  --gray-line: #dcdde0;
-  --text: #666666;
-  --text-highlight: #b3b9ff;
-  --title: #2e384d;
-  --red: #e8384d;
-  --red-dark: #d9415f;
-  --green: #4cd62b;
-  --green-dark: #49b22a;
-  --blue: #5965e0;
-  --blue-dark: #3953b8;
-  --blue-twitter: #2aa9e0;
 }
 
 @media (max-width: 1080px) {
