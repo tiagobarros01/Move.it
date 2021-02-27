@@ -62,6 +62,10 @@ export const ChallengeActive = styled.div`
     justify-content: center;
     align-items: center;
 
+    @media (max-width: 768px) {
+      margin-top: 2rem
+    }
+
     & strong {
       font-size: 2rem;
       font-weight: 600;
@@ -72,6 +76,7 @@ export const ChallengeActive = styled.div`
 
   & p {
     line-height: 1.5;
+    margin-bottom: 1rem;
   }
 
   & footer {

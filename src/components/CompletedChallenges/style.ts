@@ -11,6 +11,11 @@ const CompletedChallengesContainer = styled.div`
 
   font-weight: 500;
 
+  @media (max-width: 768px) {
+    margin: 2.5rem auto;
+    width: 100%;
+  }
+
   & > span:first-child {
     font-size: 1.25rem;
   }

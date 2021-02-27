@@ -9,7 +9,6 @@ import {
 const ChallengeBox: React.FC = () => {
   const { activeChallenge, resetChallenge, completedChallenge } = useContext(ChallengesContext);
   const { resetCountdown } = useContext(CountdownContext);
-  // const { type, description, amount } = activeChallenge;
 
   const handleChallengeSucceeded = () => {
     completedChallenge();

@@ -1,11 +1,23 @@
 import styled from 'styled-components';
 
+export const CountdownPosition = styled.div`
+  @media (max-width: 768px) {
+    margin: 0 auto;
+    width: 100%;
+  }
+`;
+
 export const CountdownContainer = styled.div`
   display: flex;
   align-items: center;
   font-family: Rajdhani;
   font-weight: 600;
   color: ${(props) => props.theme.colors.text};
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 0 auto;
+  }
 
   & > div {
     flex: 1;
@@ -19,10 +31,14 @@ export const CountdownContainer = styled.div`
     border-radius: 5px;
     font-size: 8.5rem;
     text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 6.5rem;
+    }
   }
 
   & > div span {
-    flex: 1;
+      flex: 1;
   }
 
   & > span {
@@ -60,12 +76,16 @@ export const CountdownButton = styled.button`
 
   transition: 200ms;
 
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 2rem auto;
+  }
+
   & img {
     margin-left: 1rem;
   }
 
   &:not(:disabled):hover {
-    /* background: var(--blue-dark); */
     border-bottom: 3px solid ${(props) => props.theme.colors.blue};
   }
 
@@ -75,6 +95,11 @@ export const CountdownButton = styled.button`
     cursor: not-allowed;
 
     border-bottom: 3px solid ${(props) => props.theme.colors.green};
+
+    @media (max-width: 768px) {
+    width: 100%;
+    margin: 2rem auto;
+  }
   }
 `;
 
@@ -100,9 +125,12 @@ export const CountdownButtonActive = styled.button`
 
   transition: 200ms ease-in-out;
 
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 2rem auto;
+  }
+
   &:not(:disabled):hover {
-    /* background: var(--red);
-    color: var(--secondary); */
     border-bottom: 3px solid ${(props) => props.theme.colors.DarkRed};
   }
 `;

@@ -10,7 +10,7 @@ import CompletedChallenges from '../components/CompletedChallenges';
 import Countdown from '../components/Countdown';
 import ExperienceBar from '../components/Header';
 import Profile from '../components/Profile';
-import { Container, Section } from '../styles/pages/Game';
+import { Container, ContentPosition, Section } from '../styles/pages/Game';
 import ChallengeBox from '../components/ChallengeBox';
 import { CountdownProvider } from '../contexts/countdownContext';
 import { ChallengesProvider } from '../contexts/challengesContext';
@@ -31,10 +31,10 @@ export default function Game(props: GameProps) {
 
   const [theme, setTheme] = usePersistedState('theme', light);
 
-  // const { title } = theme;
+  const { title } = theme;
 
   const toggleTheme = () => {
-    setTheme(theme.title === 'light' ? dark : light);
+    setTheme(title === 'light' ? dark : light);
   };
 
   return (
@@ -52,11 +52,13 @@ export default function Game(props: GameProps) {
           <ExperienceBar />
           <CountdownProvider>
             <Section>
-              <div>
-                <Profile />
-                <CompletedChallenges />
+              <ContentPosition>
+                <div>
+                  <Profile />
+                  <CompletedChallenges />
+                </div>
                 <Countdown />
-              </div>
+              </ContentPosition>
               <div>
                 <ChallengeBox />
               </div>
