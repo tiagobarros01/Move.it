@@ -4,6 +4,8 @@ export default {
   colors: {
     primary: '#f2f3f5',
     secondary: '#fff',
+    secondaryTransparent: 'rgba(255, 255, 255, 0)',
+    secondaryShadow: 'rgba(0, 0, 0, 0.05)',
     lineGray: '#dcdde0',
     text: '#666666',
     textHighlight: '#b3b9ff',

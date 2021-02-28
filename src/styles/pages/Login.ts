@@ -10,7 +10,6 @@ export const LoginSection = styled.div`
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   padding-top: 5%;
-
 `;
 
 export const LogoLeft = styled.div`
@@ -32,20 +31,6 @@ export const LogoRight = styled.div`
     font-size: 2.25rem;
   }
 
-  & p {
-    font-size: 1.2rem;
-    margin-top: 1.5rem;
-
-    color: #B2B9FF;
-
-    display: flex;
-    align-items: center;
-
-    & img {
-      margin-right: 1.5rem;
-    }
-  }
-
   & input {
     padding: 1.3rem;
 
@@ -54,6 +39,8 @@ export const LogoRight = styled.div`
     border: 0;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
 
     color: ${(props) => props.theme.colors.secondary};
     background: ${(props) => props.theme.colors.DarkBlue};
@@ -63,19 +50,33 @@ export const LogoRight = styled.div`
   }
 
   & input::placeholder {
-    color: #B2B9FF;
+    color: #b2b9ff;
+  }
+`;
+
+export const ButtonUsername = styled.button`
+  width: 5rem;
+  height: 4rem;
+
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+
+  border: 0;
+  background-image: linear-gradient(
+    to right,
+    ${(props) => props.theme.colors.DarkGreen},
+    ${(props) => props.theme.colors.green}
+  );
+
+  transition: 1s;
+
+  &:disabled {
+    background: grey;
+    cursor: not-allowed;
   }
 
-  & button {
-    width: 5rem;
-    height: 4rem;
-
-    border: 0;
-    background-image: linear-gradient(to right, ${(props) => props.theme.colors.DarkBlue}, ${(props) => props.theme.colors.blue} ); 
-    
-    & img {
-      text-align: center;
-    }
+  & img {
+    text-align: center;
   }
 `;
 
@@ -85,4 +86,22 @@ export const LoginName = styled.div`
   display: flex;
   align-items: center;
   justify-content: left;
+`;
+
+export const GitHubButton = styled.button`
+  height: 4rem;
+
+  border: 0;
+  border-radius: 5px;
+
+  width: 22rem;
+
+  margin-top: 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background: #161b22;
+  color: ${(props) => props.theme.colors.primary};
 `;

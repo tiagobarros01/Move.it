@@ -19,6 +19,7 @@ import light from '../styles/themes/light';
 import dark from '../styles/themes/dark';
 
 import usePersistedState from '../../utils/usePersistedState';
+import LeftBar from '../components/LeftBar';
 
 interface GameProps {
   level: number;
@@ -29,7 +30,7 @@ interface GameProps {
 export default function Game(props: GameProps) {
   const { level, currentExperience, challengesCompleted } = props;
 
-  const [theme, setTheme] = usePersistedState('theme', light);
+  const [theme, setTheme] = usePersistedState('theme', dark);
 
   const { title } = theme;
 
@@ -45,6 +46,7 @@ export default function Game(props: GameProps) {
         challengesCompleted={challengesCompleted}
       >
         <ThemeSwitcher toggleTheme={toggleTheme} />
+        <LeftBar />
         <Container>
           <Head>
             <title>Start | move.it</title>

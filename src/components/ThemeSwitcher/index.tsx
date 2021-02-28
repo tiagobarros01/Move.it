@@ -22,7 +22,7 @@ const ThemeSwitcher: React.FC<Props> = ({ toggleTheme }) => {
         // width={50}
         offColor={colors.text}
         onColor={colors.DarkBlue}
-        offHandleColor="#333"
+        offHandleColor={colors.title}
         onHandleColor={colors.secondary}
       />
     </SwitcherContainer>
