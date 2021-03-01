@@ -7,7 +7,7 @@ const Profile: React.FC = () => {
 
   return (
     <ProfileContainer>
-      <img src="https://github.com/tiagobarros01.png" alt="Tiago Barros" />
+      <img src="https://github.com/tiagobarros01.png" alt="Tiago Barros" id="photo" />
       <InfoContainer>
         <strong>Tiago Barros</strong>
         <p>

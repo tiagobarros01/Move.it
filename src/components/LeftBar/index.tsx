@@ -1,8 +1,12 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+import { useRouter } from 'next/router';
 import React from 'react';
+import Previous from '../Previous';
 import { BarContainer, IconsContainer } from './style';
 
 const LeftBar = () => {
-  console.log('oi');
+  const router = useRouter();
 
   return (
     <BarContainer>
@@ -13,12 +17,16 @@ const LeftBar = () => {
         <div>
           <img src="/icons/home.svg" alt="Home" />
         </div>
-        <div>
+        <div
+          onClick={(() => {
+            router.push('/leaderboard');
+          })}
+        >
           <img src="/icons/leaderboard.svg" alt="Leaderboard" />
         </div>
       </IconsContainer>
       <div>
-        <div />
+        <Previous />
       </div>
     </BarContainer>
   );
