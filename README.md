@@ -8,7 +8,16 @@ Move.it
  
 <p align="center">AN app for devs who spend a lot of time coding</p>
 
-## *Techs*: Next.JS | React | Typescript | Styled-Components
+## Features
+ - **React Js** - A JavaScript library for building user interfaces
+ - **Typescript**
+ - **Styled-components**
+
+## Getting started
+
+1. CLone this repo using `git clone `
+2. Move yourself to the appropriate directory: `cd moveit`<br />
+3. Run `yarn` to install dependencies<br />
 
 ## I also used Eslint & Commitlint in development
 
