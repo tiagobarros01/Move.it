@@ -6,7 +6,7 @@
 Move.it
  </h1>
  
-<p align="center">AN app for devs who spend a lot of time coding</p>
+<p align="center">An app for devs who spend a lot of time coding</p>
 
 ## Features
  - **ReactJs** - A JavaScript library for building user interfaces
