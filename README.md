@@ -12,6 +12,9 @@ Move.it
   <img src="public/moveit.gif"/>
 </p>
 
+## Status: 
+ <h4> [incompleted]</h4>
+
 ## Features
  - **ReactJs** - A JavaScript library for building user interfaces
  - **NextJS**
