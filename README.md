@@ -8,6 +8,13 @@ Move.it
  
 <p align="center">An app for devs who spend a lot of time coding</p>
 
+<p align="center">
+  <img src="public/moveit.gif"/>
+</p>
+
+## Status: 
+ <h4> [incompleted]</h4>
+
 ## Features
  - **ReactJs** - A JavaScript library for building user interfaces
  - **NextJS**
