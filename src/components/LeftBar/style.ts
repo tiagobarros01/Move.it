@@ -14,8 +14,7 @@ export const BarContainer = styled.div`
   background-image: linear-gradient(180deg, ${(props) => props.theme.colors.secondary} 0%, ${(props) => props.theme.colors.secondaryTransparent} 100%);
   filter: drop-shadow(0px 0px 60px ${(props) => props.theme.colors.secondaryShadow});
 
-  & div:first-child {
-    width: 100%;
+  & > div {
     text-align: center;
     margin-top: 1.5rem;
   }
@@ -27,18 +26,25 @@ export const IconsContainer = styled.div`
   justify-content: center;
   flex-direction: column;
 
-  & div {
-    cursor: pointer;
+  width: 100%;
+`;
 
-    &:hover {
-      transform: translateY(-7px);
-    }
+export const IconContainer = styled.div`
+  width: 100%;
+  height: 4rem;
+`;
+
+export const HomeIcon = styled.img`
+  cursor: pointer;
+  
+  &:hover {
+    transform: translateY(-7px);
   }
+`;
+export const LeaderboardIcon = styled.img`
+  cursor: pointer;
 
-  & div:first-child {
-    margin-bottom: 2rem;
-    width: 100%;
-    height: 2.5rem;
-
+  &:hover {
+    transform: translateY(-7px);
   }
 `;

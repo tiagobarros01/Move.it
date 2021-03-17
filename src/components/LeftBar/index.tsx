@@ -3,7 +3,9 @@
 import { useRouter } from 'next/router';
 import React from 'react';
 import Previous from '../Previous';
-import { BarContainer, IconsContainer } from './style';
+import {
+  BarContainer, HomeIcon, IconContainer, IconsContainer, LeaderboardIcon,
+} from './style';
 
 const LeftBar = () => {
   const router = useRouter();
@@ -14,16 +16,46 @@ const LeftBar = () => {
         <img src="/icons/logo.svg" alt="Logo" />
       </div>
       <IconsContainer>
-        <div>
-          <img src="/icons/home.svg" alt="Home" />
-        </div>
-        <div
-          onClick={(() => {
-            router.push('/leaderboard');
-          })}
-        >
-          <img src="/icons/leaderboard.svg" alt="Leaderboard" />
-        </div>
+        {router.pathname === '/game' ? (
+          <>
+            <IconContainer>
+              <HomeIcon
+                src="/icons/home.svg"
+                onClick={(() => {
+                  router.push('/game');
+                })}
+              />
+            </IconContainer>
+            <IconContainer>
+              <LeaderboardIcon
+                src="/icons/off-leaderboard.svg"
+                onClick={(() => {
+                  router.push('/leaderboard');
+                })}
+              />
+            </IconContainer>
+          </>
+        ) : (
+          <>
+            <IconContainer>
+              <HomeIcon
+                src="/icons/off-home.svg"
+                onClick={(() => {
+                  router.push('/game');
+                })}
+              />
+            </IconContainer>
+            <IconContainer>
+              <LeaderboardIcon
+                src="/icons/leaderboard.svg"
+                onClick={(() => {
+                  router.push('/leaderboard');
+                })}
+              />
+            </IconContainer>
+          </>
+        ) }
+
       </IconsContainer>
       <div>
         <Previous />

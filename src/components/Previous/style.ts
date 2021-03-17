@@ -4,6 +4,10 @@ const PreviousContainer = styled.div`
   padding: 1rem;
   margin-bottom: 1.5rem;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   border-radius: 15px;
   cursor: pointer;
 

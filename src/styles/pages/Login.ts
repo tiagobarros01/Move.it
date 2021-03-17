@@ -94,7 +94,7 @@ export const GitHubButton = styled.button`
   border: 0;
   border-radius: 5px;
 
-  width: 22rem;
+  width: 22.8rem;
 
   margin-top: 1.5rem;
 
@@ -102,6 +102,23 @@ export const GitHubButton = styled.button`
   align-items: center;
   justify-content: space-around;
 
-  background: #161b22;
-  color: ${(props) => props.theme.colors.primary};
+  border: 2px solid ${(props) => props.theme.colors.DarkBlue} ;
+  color: ${(props) => props.theme.colors.title};
+
+  transition: 500ms;
+
+  & svg path{
+    fill: ${(props) => props.theme.colors.title};
+    
+  }
+
+  &:hover {
+    background: #161b22;
+    color: ${(props) => props.theme.colors.primary};
+
+    & svg path{
+    fill: ${(props) => props.theme.colors.primary};
+    
+  }
+  }
 `;
