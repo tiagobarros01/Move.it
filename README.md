@@ -13,7 +13,7 @@ Move.it
 </p>
 
 ## Status: 
- <h4> [incompleted]</h4>
+ <h4> [incompleted] </h4>
 
 ## Features
  - **ReactJs** - A JavaScript library for building user interfaces
@@ -24,8 +24,8 @@ Move.it
 
 ## Getting started
 
-1. CLone this repo using `git clone `
-2. Move yourself to the appropriate directory: `cd moveit`<br />
+1. CLone this repo using `git clone`
+2. Move yourself to the appropriate directory `cd moveit`<br />
 3. Run `yarn` to install dependencies<br />
 4. Run `yarn dev` to start the app
 

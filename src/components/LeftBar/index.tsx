@@ -2,9 +2,10 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import { useRouter } from 'next/router';
 import React from 'react';
-import Previous from '../Previous';
+import { signOut } from 'next-auth/client';
+// import Previous from '../Previous';
 import {
-  BarContainer, HomeIcon, IconContainer, IconsContainer, LeaderboardIcon,
+  BarContainer, ExitIcon, HomeIcon, IconContainer, IconsContainer, LeaderboardIcon,
 } from './style';
 
 const LeftBar = () => {
@@ -58,7 +59,16 @@ const LeftBar = () => {
 
       </IconsContainer>
       <div>
-        <Previous />
+        <IconContainer>
+          <ExitIcon onClick={() => {
+            signOut();
+            router.push('/');
+          }}
+          >
+            EXIT
+          </ExitIcon>
+        </IconContainer>
+        {/* <Previous /> */}
       </div>
     </BarContainer>
   );

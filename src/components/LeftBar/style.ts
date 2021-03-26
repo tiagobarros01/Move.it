@@ -48,3 +48,13 @@ export const LeaderboardIcon = styled.img`
     transform: translateY(-7px);
   }
 `;
+
+export const ExitIcon = styled.div`
+  cursor: pointer;
+
+  font-weight: bold;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.title}
+  }
+`;
