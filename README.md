@@ -12,14 +12,12 @@ Move.it
   <img src="public/moveit.gif"/>
 </p>
 
-## Status: 
- <h4> [incompleted] </h4>
-
 ## Features
  - **ReactJs** - A JavaScript library for building user interfaces
- - **NextJS**
- - **Typescript**
- - **Styled-components**
+ - **NextJS** - The React Framework for Production
+ - **NextAuth** - Authentication for Next.js
+ - **Typescript** - A superset of Javascript
+ - **Styled-components** - A lib of styles for React
  - I also used Eslint & Commitlint in development
 
 ## Getting started
