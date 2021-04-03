@@ -9,7 +9,7 @@ Move.it
 <p align="center">An app for devs who spend a lot of time coding</p>
 
 <p align="center">
-  <img src="public/moveit.gif"/>
+  <img src="public/moveit2.gif"/>
 </p>
 
 ## Features
