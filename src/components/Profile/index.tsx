@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { useSession } from 'next-auth/client';
 import { ChallengesContext } from '../../contexts/challengesContext';
 import { InfoContainer, ProfileContainer } from './style';
@@ -6,7 +6,7 @@ import { InfoContainer, ProfileContainer } from './style';
 const Profile: React.FC = () => {
   const { level } = useContext(ChallengesContext);
 
-  const [session, loading] = useSession();
+  const [session] = useSession();
 
   return (
     <ProfileContainer>

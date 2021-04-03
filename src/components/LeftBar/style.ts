@@ -36,6 +36,7 @@ export const IconContainer = styled.div`
 
 export const HomeIcon = styled.img`
   cursor: pointer;
+  transition: 200ms;
   
   &:hover {
     transform: translateY(-7px);
@@ -43,6 +44,7 @@ export const HomeIcon = styled.img`
 `;
 export const LeaderboardIcon = styled.img`
   cursor: pointer;
+  transition: 200ms;
 
   &:hover {
     transform: translateY(-7px);
@@ -52,6 +54,7 @@ export const LeaderboardIcon = styled.img`
 export const ExitIcon = styled.div`
   cursor: pointer;
 
+  transition: 200ms;
   font-weight: bold;
 
   &:hover {

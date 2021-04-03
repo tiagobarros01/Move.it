@@ -1,4 +1,3 @@
-/* eslint-disable no-else-return */
 import {
   useState,
   useEffect,
@@ -10,9 +9,8 @@ function usePersistedState(key: string, initialState: any) {
 
     if (storageValue) {
       return JSON.parse(storageValue);
-    } else {
-      return initialState;
     }
+    return initialState;
   });
 
   useEffect(() => {
