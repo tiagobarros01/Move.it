@@ -43,7 +43,7 @@ export default function Home() {
                 <input
                   type="text"
                   onChange={(event) => setName(event.target.value)}
-                  value={session ? session.user.name : ''}
+                  defaultValue={session ? session.user.name : ''}
                   placeholder="Write your username"
                 />
                 <ButtonUsername

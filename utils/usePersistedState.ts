@@ -1,5 +1,8 @@
 /* eslint-disable no-else-return */
-import { useState, useEffect } from 'react';
+import {
+  useState,
+  useEffect,
+} from 'react';
 
 function usePersistedState(key: string, initialState: any) {
   const [state, setState] = useState(() => {

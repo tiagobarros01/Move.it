@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
   box-sizing: border-box;
 
-  transition: 200ms;
+  /* transition: 200ms; */
 }
 
 body, button {

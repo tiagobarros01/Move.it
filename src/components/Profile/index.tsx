@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useSession } from 'next-auth/client';
 import { ChallengesContext } from '../../contexts/challengesContext';
 import { InfoContainer, ProfileContainer } from './style';
