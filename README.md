@@ -22,7 +22,7 @@ Move.it
 
 ## Getting started
 
-1. CLone this repo using `git clone`
+1. Clone this repo using `git clone`
 2. Move yourself to the appropriate directory `cd moveit`<br />
 3. Run `yarn` to install dependencies<br />
 4. Run `yarn dev` to start the app
