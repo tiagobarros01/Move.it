@@ -15,8 +15,8 @@ Move.it
 ## Features
  - **ReactJs** - A JavaScript library for building user interfaces
  - **NextJS** - The React Framework for Production
- - **NextAuth** - Authentication for Next.js
  - **Typescript** - A superset of Javascript
+ - **NextAuth** - Authentication for Next.js
  - **Styled-components** - A lib of styles for React
  - I also used Eslint & Commitlint in development
 
